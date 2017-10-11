@@ -1,0 +1,5 @@
+<div class="alert alert-info">
+  <b><%= comment.author %> said:</b>
+  <%=simple_format comment.body %>
+  <div class="text-muted muted"><%= time_ago_in_words comment.created_at %> ago.</div>
+</div>
