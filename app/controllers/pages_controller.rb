@@ -1,5 +1,9 @@
 class PagesController < ApplicationController
   def welcome
-    render body: 'hello world'
+    if( params['admin'] )
+      render
+    else
+      render body: 'go away, stranger'
+    end
   end
 end
