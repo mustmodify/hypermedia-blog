@@ -17,4 +17,8 @@
 
   <%= simple_format @post.body %>
 
+  <hr />
+  <h2>Comments / Snarks / etc</h2>
+  <%= render @post.comments %>
+  <%= render partial: 'posts/comment_form' %>
 </dl>
