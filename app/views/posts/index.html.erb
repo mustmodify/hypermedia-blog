@@ -9,7 +9,7 @@
       <%= @posts.each do |post| %>
         <div class="panel panel-default panel-body">
           <h2><%= link_to(post.title, post) %></h2>
-          <%= simple_format(post.body) %>
+          <%= markdown(post.body) %>
           <p>( <%= post.comments.count %> comments )</p>
           <hr />
           <%= link_to 'Edit', edit_post_path(post) %>
