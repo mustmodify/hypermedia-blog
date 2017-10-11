@@ -1,0 +1,18 @@
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <id><%= posts_url() %></id>
+  <title>My Blogz</title>
+  <updated><%= @posts.maximum(:updated_at) %></updated>
+  <generator>me and Rails</generator>
+
+  <% @posts.each do |post| %>
+    <entry>
+      <id><%= post_url(post) %></id>
+      <title><%= post.title %></title>
+      <updated><%= post.updated_at %></updated>
+
+      <summary type="html">
+        <%= simple_format post.body %>
+      </summary>
+    </entry>
+  <% end %>
+</feed>
