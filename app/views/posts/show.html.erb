@@ -9,7 +9,7 @@
   <% end %>
   <h1><%= @post.title %></h1>
   <p>Written <%= time_ago_in_words(@post.created_at) %> ago.
-  <% if @post.published == false %>
+  <% if !@post.published_at %>
     <div class="label label-warning">Unpublished</div>
   <% end %>
 </div>
