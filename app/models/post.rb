@@ -10,7 +10,7 @@ class Post < ApplicationRecord
 
   def published=(value)
     if value
-      self.publised_at ||= Time.now
+      self.published_at ||= Time.now
     else
       self.published_at = nil
     end
